@@ -91,7 +91,7 @@ namespace Robo
 
 		if (this->authCharacteristic->canWrite())
 		{
-			std::array<byte, 15> authData{ROBOSERIAL};
+			std::array<byte, 16> authData{ROBOSERIAL};
 			this->authCharacteristic->writeValue(authData.data(), authData.size(), true);
 			Serial.println("Auth Data send!");
 		}
